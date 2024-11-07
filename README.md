@@ -1,27 +1,30 @@
-# Object_tracker
-Este proyecto es un sistema de seguimiento y conteo de vehículos creado con Python y OpenCV. Este proyecto se puede utilizar para el monitoreo del tráfico, el análisis de datos y otras aplicaciones relacionadas con el flujo de vehículos y la gestión del tráfico
+## Sistema de Detección y Seguimiento de Vehículos
+Este proyecto implementa un sistema de detección y seguimiento de vehículos utilizando OpenCV. Detecta vehículos desde un video, los clasifica según su tamaño (automóvil, bus o camión), cuenta los vehículos en carriles específicos, identifica el color predominante de cada vehículo y permite hacer zoom en la zona de los carriles para inspección detallada. Además, el sistema muestra el conteo de vehículos por carril y cuenta con funciones para pausar, hacer zoom y alternar distintas ventanas de visualización.
 
-# Vehicle Tracking and Counting System
 
-Este proyecto utiliza Python y OpenCV para detectar, rastrear y contar vehículos que pasan a través de una zona de interés en una grabación de video. Se ha implementado un sistema de detección y seguimiento que asigna un ID único a cada vehículo, permitiendo un conteo preciso a medida que cruzan una línea definida en el área de interés.
+### Instalación
+Primero deberas instalar python, con el siguiente url lo puedeshacer:
+    url "https://www.python.org/downloads/"
 
-## Estructura del Proyecto
 
-- `detector.py`: Script principal que carga el video, define el área de interés, aplica la detección de vehículos usando sustracción de fondo y rastrea cada vehículo con un ID único.
-- `tracker.py`: Clase `Tracker` que maneja la lógica de seguimiento de vehículos mediante el cálculo de distancias entre el centro de los objetos detectados, asignando y manteniendo IDs únicos para cada vehículo.
-- `resources`: Carpeta que contiene el archivo de video (`Street.mp4`) usado en el análisis.
+Seguidamente se deben instalar los paquetes necesarios 
 
-## Requisitos
+  $ pip install opencv-python numpy
 
-- Python 3.x
-- OpenCV
-- Numpy (opcional, según configuración de OpenCV)
+Coloca el archivo de video (Street.mp4 o el video de tu preferencia) en el directorio resources.
 
-## Instalación
 
-Instala las dependencias en el entorno virtual
-```bash
-  python -m venv venv
-  source venv/bin/activate  # Linux/macOS
-  .\venv\Scripts\activate  # Windows
-  pip install opencv-python
+### Con el siguiente comando lograras correr el codigo 
+   $ python main.py
+
+
+
+## Aspectos importantes que debes considerar
+Controles:
+ESC: Salir del programa.
+c: Alternar ventana de conteo de vehículos.
+z: Alternar el modo de zoom en la zona de carriles.
++: Aumentar el nivel de zoom.
+-: Disminuir el nivel de zoom.
+d: Pausar o reanudar el video cuando el zoom está activo.
+
