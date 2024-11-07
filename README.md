@@ -19,12 +19,7 @@ Este proyecto utiliza Python y OpenCV para detectar, rastrear y contar vehículo
 
 ## Instalación
 
-1. Clona el repositorio:
-
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_REPOSITORIO>
-2. Instala las dependencias en el entorno virtual
+Instala las dependencias en el entorno virtual
 ```bash
   python -m venv venv
   source venv/bin/activate  # Linux/macOS
